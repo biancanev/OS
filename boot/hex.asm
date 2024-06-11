@@ -22,6 +22,8 @@ add_character_hex:
 _done:
         mov bx, HEX_OUT
         call print_string
+        mov bx, CR
+        call print_string
         popa
         ret
 add_7:
@@ -29,3 +31,4 @@ add_7:
         jmp add_character_hex
 
 HEX_OUT: db "0x0000", 0
+CR: db 0xA, 0xD, 0
